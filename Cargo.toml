@@ -11,3 +11,6 @@ rodio="0.13"
 cpal="0.13"
 log="0.4"
 env_logger="0.8"
+
+[profile.release]
+debug = true
