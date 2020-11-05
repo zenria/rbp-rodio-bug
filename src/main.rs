@@ -7,6 +7,11 @@ use std::time::Duration;
 const ALARME: &[u8; 578801] = include_bytes!("alarme.wav");
 
 fn main() {
+    println!("size of usize: {}", std::mem::size_of::<usize>());
+    println!(
+        "size of c_long {}",
+        std::mem::size_of::<std::os::raw::c_long>()
+    );
     env_logger::init();
     let device = cpal::default_host()
         .output_devices()
